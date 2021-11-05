@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:test_flutter2/page/Status_page.dart';
+import 'package:test_flutter2/page/profile_page.dart';
 class HomePageStatus extends StatelessWidget {
   const HomePageStatus({Key? key}) : super(key: key);
 
@@ -15,20 +17,31 @@ class HomePageStatus extends StatelessWidget {
                 margin: EdgeInsets.all(10),
                 child: Row(
                   children: [
-                    CircleAvatar(
-                      backgroundImage: NetworkImage('https://scontent.fhan5-3.fna.fbcdn.net/v/t1.6435-9/123009199_1288794368122642_7219690245840446753_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=_kxpuYCPOXcAX-XnvLm&_nc_ht=scontent.fhan5-3.fna&oh=a9854f383c6ea6018f4cad3b0b3c4f71&oe=61A7ACDE'),
+                    InkWell(
+                      onTap: (){
+                        Navigator.pushNamed(context, ProfilePage.routeName);
+                      },
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage('https://scontent.fhan5-3.fna.fbcdn.net/v/t1.6435-9/123009199_1288794368122642_7219690245840446753_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=_kxpuYCPOXcAX-XnvLm&_nc_ht=scontent.fhan5-3.fna&oh=a9854f383c6ea6018f4cad3b0b3c4f71&oe=61A7ACDE'),
+                      ),
                     ),
                     Padding(padding: EdgeInsets.only(right: 10),),
-                    Expanded(child: Container(
-                      alignment: Alignment.centerLeft,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: Colors.black45),
-                      ),
-                      padding: EdgeInsets.only(left: 20),
-                      child: Text('Bạn đang nghĩ gì?',style: TextStyle(fontSize: 16),),
-                      height: 35,
-                    ),),
+                    Expanded(child:
+                      InkWell(
+                        onTap: (){
+                          Navigator.pushNamed(context, StatusPage.routeName);
+                        },
+                        child: Container(
+                          alignment: Alignment.centerLeft,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: Colors.black45),
+                          ),
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text('Bạn đang nghĩ gì?',style: TextStyle(fontSize: 16),),
+                          height: 35,
+                        ),
+                      ),),
                   ],
                 ),
               )),

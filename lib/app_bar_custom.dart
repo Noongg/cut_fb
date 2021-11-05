@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:test_flutter2/page/message_page.dart';
+import 'package:test_flutter2/page/search_page.dart';
 import 'tab_page/home/home_page.dart';
 import 'tab_page/flag_page.dart';
 import 'tab_page/menu_page.dart';
@@ -35,7 +37,9 @@ class _AppBarCustomState extends State<AppBarCustom> {
                     shape: BoxShape.circle
                   ),
                   child: IconButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.pushNamed(context, SearchPage.routeName);
+                    },
                     color: Colors.black,
                     iconSize: 30,
                     icon: Icon(Icons.search),
@@ -48,7 +52,9 @@ class _AppBarCustomState extends State<AppBarCustom> {
                       shape: BoxShape.circle
                   ),
                   child: IconButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.pushNamed(context, MessagePage.routeName);
+                    },
                     color: Colors.black,
                     iconSize: 30,
                     icon: Icon(Icons.message),
