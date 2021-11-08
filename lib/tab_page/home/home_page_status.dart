@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:test_flutter2/page/Status_page.dart';
+import 'package:test_flutter2/page/status_page.dart';
 import 'package:test_flutter2/page/profile_page.dart';
 class HomePageStatus extends StatelessWidget {
   const HomePageStatus({Key? key}) : super(key: key);

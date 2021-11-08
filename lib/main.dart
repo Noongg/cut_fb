@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:test_flutter2/page/Status_page.dart';
+import 'package:test_flutter2/page/status_page.dart';
 import 'package:test_flutter2/page/message_page.dart';
 import 'package:test_flutter2/page/profile_page.dart';
 import 'package:test_flutter2/page/search_page.dart';
